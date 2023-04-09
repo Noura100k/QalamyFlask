@@ -9,13 +9,20 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "base-64": "^1.0.0",
     "expo": "~48.0.10",
+    "expo-file-system": "~15.2.2",
     "expo-status-bar": "~1.4.4",
     "react": "18.2.0",
-    "react-native": "0.71.6"
+    "react-native": "0.71.6",
+    "react-native-ionicons": "^4.x",
+    "react-native-signature-canvas": "^4.5.0",
+    "react-native-webview": "11.26.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.0"
+    "@babel/core": "^7.20.0",
+    "concurrently": "^8.0.1",
+    "cross-env": "^7.0.3"
   },
   "private": true
 }
