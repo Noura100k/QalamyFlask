@@ -47,11 +47,12 @@ export default function Exam_letter({ text }) {
      * 5. replace "<YourLaptopIP>"" with your IP
      * example: http://192.168.100.5:19006/classify
      */
-    let apiUrl = "http://192.168.1.19:5000/classify";
+    let apiUrl = "http://192.168.1.6:8000/classify/";
 
     const file = DataURIToBlob(signature);
     let formData = new FormData();
-    formData.append('photo', file, 'photo.png');
+    formData.append('image', signature);
+    formData.append('text', "textcontent");
 
     let options = {
       method: "POST",
@@ -68,7 +69,6 @@ export default function Exam_letter({ text }) {
   const handleConfirm = () => {
     ref.current.readSignature();
   };
-
   const imgWidth = 300;
   const imgHeight = 300;
   const style = `.m-signature-pad {box-shadow: none; border: none; } 
